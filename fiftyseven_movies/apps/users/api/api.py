@@ -7,7 +7,7 @@ from apps.users.models import User
 from apps.users.api.serializers import UserSerializer, UserListSerializer
 
 
-@api_view(['GET', 'PUT', 'DELETE'])
+@api_view(['GET', 'DELETE'])
 def user_detail_api_view(request, pk):
     user = User.objects.filter(id=pk).first()    
 
@@ -16,18 +16,6 @@ def user_detail_api_view(request, pk):
             user_serializer = UserSerializer(user)
 
             return Response(user_serializer.data, status=status.HTTP_200_OK)
-        
-
-        elif request.method == 'PUT':
-            user_serializer = UserSerializer(user, data=request.data)
-
-            if user_serializer.is_valid():
-                user_serializer.save()
-
-                return Response(user_serializer.data, status=status.HTTP_200_OK)
-
-            return Response(user_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-        
 
         elif request.method == 'DELETE':
             user.delete()

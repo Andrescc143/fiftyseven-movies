@@ -16,10 +16,10 @@ class UserManager(BaseUserManager):
         user.save(using=self.db)
         return user
 
-    def create_user(self, username, email, password=None, **extra_fields):
+    def create_user(self, username, email, password, **extra_fields):
         return self._create_user(username, email, password, False, False, **extra_fields)
 
-    def create_superuser(self, username, email, password=None, **extra_fields):
+    def create_superuser(self, username, email, password, **extra_fields):
         return self._create_user(username, email, password, True, True, **extra_fields)
 
 class User(AbstractBaseUser, PermissionsMixin):
