@@ -18,10 +18,9 @@ class PMoviePlaylistViewSet(viewsets.ModelViewSet):
         return  self.serializer_class.Meta.model.objects.filter(owner=pk, public=False) 
     
     
-    def retrieve(self, request, pk=None, *args, **kwargs):
+    def retrieve(self, request, *args, **kwargs):
         
         playlists = self.get_queryset(pk)
-        print("Plasyas ",       playlists)
         
         if not playlists:        
             serializer = self.serializer_class(playlists, many=True)
