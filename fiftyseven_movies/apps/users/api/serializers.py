@@ -38,14 +38,3 @@ class UserSerializer(serializers.ModelSerializer):
         updated_user.save()
         return updated_user
 
-
-class UserListSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = User
-    
-    def to_representation(self, instance):
-        return {
-            'id': instance['id'],
-            'email': instance['email'],
-            'password': instance['password']
-        }

@@ -4,7 +4,7 @@ from rest_framework.decorators import api_view
 from rest_framework import status
 
 from apps.users.models import User
-from apps.users.api.serializers import UserSerializer, UserListSerializer
+from apps.users.api.serializers import UserSerializer
 
 
 @api_view(['GET', 'DELETE'])
@@ -30,7 +30,7 @@ def user_api_view(request):
     #to plot the total list of users
     if request.method == 'GET':
         users = User.objects.all().values('id', 'email', 'password')
-        users_serialized = UserListSerializer(users, many=True)
+        users_serialized = UserSerializer(users, many=True)
 
         return Response(users_serialized.data, status=status.HTTP_200_OK)
     
