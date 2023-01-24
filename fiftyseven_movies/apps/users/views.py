@@ -7,7 +7,7 @@ from rest_framework.response import Response
 from rest_framework_simplejwt.views import TokenObtainPairView
 from rest_framework_simplejwt.tokens import RefreshToken
 
-from apps.users.api.serializers import UserSerializer, CustomTokenObtainPairView
+from apps.users.api.serializers import CustomTokenObtainPairView, UserSerializer
 from apps.users.api.api import User
 
 
@@ -22,7 +22,8 @@ class Login(TokenObtainPairView):
         
         #Getting the errors in case of unsuccesful validation
         if not user_serializer.is_valid():
-            return Response(user_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+            if not user_serializer.errors['email']:
+                return Response(user_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
         
         user = authenticate(
             email = email,
