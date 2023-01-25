@@ -34,8 +34,8 @@ class PMoviePlaylistViewSet(viewsets.ModelViewSet):
                 return Response({'message': 'Private data retrieved correctly.',
                                 'data': serializer.data}, status=status.HTTP_200_OK)
             else:
-                return Response({'message': 'You do not have access to others private playlists',
-                                'data': serializer.data}, status=status.HTTP_401_UNAUTHORIZED)
+                return Response({'message': 'You do not have access to others private playlists'},
+                                status=status.HTTP_401_UNAUTHORIZED)
             
         return Response({'error': 'No private movie playlists were found associated to this user.'},
                          status=status.HTTP_404_NOT_FOUND)
@@ -56,8 +56,8 @@ class PMoviePlaylistViewSet(viewsets.ModelViewSet):
                     return Response({'message': 'Playlist data updated correctly.',
                                     'data': playlist_serializer.data}, status=status.HTTP_200_OK)
                 else:
-                    return Response({'message': 'You do not have access to others private playlists',
-                                    'data': playlist_serializer.data}, status=status.HTTP_401_UNAUTHORIZED)
+                    return Response({'message': 'You do not have access to others private playlists'},
+                                    status=status.HTTP_401_UNAUTHORIZED)
                 
             return Response({'error': playlist_serializer.errors},
                          status=status.HTTP_400_BAD_REQUEST)
