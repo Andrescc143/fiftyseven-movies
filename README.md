@@ -25,3 +25,8 @@ Follow the instructions below to retrieve and executed all the features implemen
 ## Documentation and guideline
 
 It was prepared an easy-to-read and user-friendly guideline to use the service. You can access the material through Notion, by clicking the following link: https://grape-fuel-459.notion.site/Fiftyseven-movies-857021689b9640f5993577770d79ee7d
+
+
+## Cloud-based deployment
+
+You can access to the app by clicking on https://fiftyseven-movies.azurewebsites.net/. It is important to point out that, as it is no any index or welcoming page created, the first page you will see will be the Azure default page, however, you can add the corresponding endpoints to the URL and use the app as it is described in the guideline (previous section) 
