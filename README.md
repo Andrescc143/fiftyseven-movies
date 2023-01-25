@@ -29,7 +29,7 @@ It was prepared an easy-to-read and user-friendly guideline to use the service. 
 
 ## Cloud-based deployment
 
-**Note**
+> **Note**
 test
 
 You can access to the app by clicking on https://fiftyseven-movies.azurewebsites.net/get-movies/. It is important to point out that, as it is no any index or welcoming page created, the first page you will see will be the one associated to the *get-movies* endpoint (The one with which the Movies table is filled up), however, you can add/change the corresponding endpoints to the URL and use the app as it is described in the guideline (previous section) 
