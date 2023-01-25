@@ -30,7 +30,7 @@ It was prepared an easy-to-read and user-friendly guideline to use the service. 
 ## Cloud-based deployment
 
 > **Note**
-test
+The app version uploaded to the cloud is the one in the *production* branch of this repo. The main differences are that in the production branch the *Whitenoise* package was installed to serve the staticfiles associated to the DRF built-in interfaces so that the user can use it during his tests, as well as the corresponding configuration parameters modified in the settings file of the project.
 
 You can access to the app by clicking on https://fiftyseven-movies.azurewebsites.net/get-movies/. It is important to point out that, as it is no any index or welcoming page created, the first page you will see will be the one associated to the *get-movies* endpoint (The one with which the Movies table is filled up), however, you can add/change the corresponding endpoints to the URL and use the app as it is described in the guideline (previous section) 
 
