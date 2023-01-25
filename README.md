@@ -43,3 +43,29 @@ The below image shows a working GET request which require an authorization token
 The following is another example, but this time, retrieving private data (data which belongs to and which is only accessible by its owner)
 
 ![private_data_example](https://github.com/Andrescc143/fiftyseven-movies/blob/production/fiftyseven_movies/fiftyseven_movies/staticfiles/services-working-private-data.png)
+
+
+## APP Highlights 
+
+### Features
+
+* JWT authentication using Simple-JWT
+* Endpoint to fill up table of the Movie model, in order to use its elements during the interaction with the table of the MoviePlaylist model
+* The project is divided by apps, considering the general logic of each feature. The apps are: 
+  * movies: Where all the features related to the movies and moviesplaylists was built, including the models (Movie and MoviePlaylist), the serializers, the views, etc.
+  * users: Where all the features related to the users authentication was built, including the models (User), the configuration of the JWT classes,the serializers, the Login and Logout views, etc.
+* The *settings.py* file was divided into base.py, local.py and production.py, where the last two files inherits from the base.py the general configurations. This to make easier the configuration of the project depending on the running environment.
+* The validation processes for the data were included in the serializers used for each view. For this app is being use both, the default validators (based on the field to be validated, like the ones for Email fields) and some custom validators.
+* The app has two versions:
+  * Source code: To download and execute in a local environment
+  * Cloud-base: To get access through internet and interact with all the services built (the code is available in the *production* branch of this repo.)
+
+### Ongoing work - Recommended future developments
+
+* Modify the models associated to the authentication system to increase the cohesion between the JWT-based system and the built-in DRF authentication system.
+* Modify the models of the Movies app to atomize the data, following the normalization rules established internationally.
+* Check the logic and abstract all the possible behaviors/procedures in order to improve the service performance and increase its scalability.
+* Build a more robust data architecture, using dedicated cloud-based services, to make as independent as possible the data from the app, and ensure high availability. 
+* Implement strict security policies on the cloud service used for the app deployment, for example, if the service is a VM (Virtual Machine), define inbound rules to filter the trafic based on, for example, IP addresses; In addition, implement a tracking system to monitor the users activity and limit the use of the service to prevent DoS and DDoS attacks.
+* Implement testing procedures to increase the quality of the services provided
+
