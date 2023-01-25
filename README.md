@@ -17,7 +17,7 @@ Follow the instructions below to retrieve and executed all the features implemen
 
 1. Clone the repository executing in your desired directory ```git clone https://github.com/Andrescc143/fiftyseven-movies.git```.
 2. Create a new virtual environment in the root folder of the project by executing ```python -m venv venv```. Make sure you have installed python and that it is included in the PATH variable (Windows).
-4. Activate the virtual environment by using ```source venv/Script/activate``` (git bash) and install all the dependencies by executing ```python -m pip install -r requirements.txt```.
+4. Activate the virtual environment by using ```source venv/Scripts/activate``` (git bash) and install all the dependencies by executing ```python -m pip install -r requirements.txt```.
 5. It is recommended to create an admin user to interact with the admin interface for validation purposes during the testing of all the features of the service built. For that, first change the current directory to the *fiftyseven_movies* directory, where is located the *manage.py* file, and execute ```py manage.py createsuperuser```. Type all the info requested by the command prompt.
 6. Finally, run the server by executing ```py manage.py runserver```
 
