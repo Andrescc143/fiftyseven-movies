@@ -21,3 +21,7 @@ Follow the instructions below to retrieve and executed all the features implemen
 5. It is recommended to create an admin user to interact with the admin interface for validation purposes during the testing of all the features of the service built. For that, first change the current directory to the *fiftyseven_movies* directory, where is located the *manage.py* file, and execute ```py manage.py createsuperuser```. Type all the info requested by the command prompt.
 6. Finally, run the server by executing ```py manage.py runserver```
 
+
+## Documentation and guideline
+
+It was prepared an easy-to-read and user-friendly guideline to use the service. You can access the material through Notion, by clicking the following link: https://grape-fuel-459.notion.site/Fiftyseven-movies-857021689b9640f5993577770d79ee7d
