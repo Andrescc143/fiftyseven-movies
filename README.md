@@ -36,3 +36,7 @@ On the other hand, as most of the endpoints are protected and only accessible pa
 The below image shows a working GET request which require an authorization token:
 
 ![example_API_working_image](https://github.com/Andrescc143/fiftyseven-movies/blob/production/fiftyseven_movies/fiftyseven_movies/staticfiles/services-working.png)
+
+The following is another example, but this time, retrieving private data (data which belongs to and which is only accessible by its owner)
+
+![private_data_example](https://github.com/Andrescc143/fiftyseven-movies/blob/production/fiftyseven_movies/fiftyseven_movies/staticfiles/services-working-private-data.png)
