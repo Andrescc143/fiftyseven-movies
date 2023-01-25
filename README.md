@@ -1,6 +1,6 @@
 # Fiftyseven-movies
 
-This is a services designed to provide to its user a way to create movies playlists by selecting the desired movies from a pre-filled-up database. The users will be able to:
+This is a services designed to provide to the users a way to create movies playlists by selecting the desired movies from a pre-filled-up database. The users will be able to:
 
 * See the total number of registered users.
 * Sign up and create their own user.
