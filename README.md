@@ -68,4 +68,5 @@ The following is another example, but this time, retrieving private data (data w
 * Build a more robust data architecture, using dedicated cloud-based services, to make as independent as possible the data from the app, and ensure high availability. 
 * Implement strict security policies on the cloud service used for the app deployment, for example, if the service is a VM (Virtual Machine), define inbound rules to filter the trafic based on, for example, IP addresses; In addition, implement a tracking system to monitor the users activity and limit the use of the service to prevent DoS and DDoS attacks.
 * Implement testing procedures to increase the quality of the services provided
+* Modify the structure of the project to adopt an standard design pattern like Aggregation, Composition, Inheritance, among others, to improve the readability, robustness and scalability of the service. 
 
